@@ -87,7 +87,7 @@ const fetchData = async () => {
         symbol: "BTC,LTC,OPUL"
     }), 
               
-   // mode: 'cors', // no-cors, *cors, same-origin
+    mode: 'cors', // no-cors, *cors, same-origin
     
     headers: {
       'Content-Type': 'application/json',
@@ -100,5 +100,5 @@ const fetchData = async () => {
             console.log(json.data)
         });
 }
-console.log('2')
+console.log('3')
 fetchData()
