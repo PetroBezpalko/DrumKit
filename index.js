@@ -87,7 +87,7 @@ const fetchData = async () => {
         symbol: "BTC,LTC,OPUL"
     }), {
 
-            mode: 'no-cors', // no-cors, *cors, same-origin
+           
 
             headers: {
                 'Content-Type': 'application/json'
@@ -97,10 +97,11 @@ const fetchData = async () => {
         }
     ).then(response => response.json())
         .then((json) => {
-            console.log(json.data)
+      console.log("inside")
+            console.log(json)
         });
 }
 
 
-console.log('9')
+console.log('10')
 fetchData()
