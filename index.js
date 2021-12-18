@@ -82,26 +82,20 @@ function buttonAnimation(currentKey){
 
 console.log('1')
 const fetchData = async () => {
+  console.log('asy')
     await fetch("https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?" + new URLSearchParams({
         CMC_PRO_API_KEY: "4e55e521-c879-452b-8c40-5af612c87045",
         symbol: "BTC,LTC,OPUL"
-    }), {
-
-           
-
-            headers: {
-                'Content-Type': 'application/json'
-    
-
-            }
-        }
-    ).then(response => response.json())
+    })
+    ).then(response => {console.log('88');
+                        return response.json()})
         .then((json) => {
       console.log("inside")
             console.log(json)
+      return json
         });
 }
 
 
-console.log('10')
+console.log('11')
 fetchData()
