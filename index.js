@@ -85,7 +85,16 @@ const fetchData = async () => {
     await fetch("https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?" + new URLSearchParams({
         CMC_PRO_API_KEY: "4e55e521-c879-452b-8c40-5af612c87045",
         symbol: "BTC,LTC,OPUL"
-    }))
+    }), 
+              
+   // mode: 'cors', // no-cors, *cors, same-origin
+    
+    headers: {
+      'Content-Type': 'application/json',
+                "Access-Control-Allow-Origin": "*"
+     
+    },
+               )
         .then(response => response.json())
         .then((json) => {
             console.log(json.data)
