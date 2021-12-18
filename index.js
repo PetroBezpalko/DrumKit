@@ -90,8 +90,8 @@ const fetchData = async () => {
             mode: 'no-cors', // no-cors, *cors, same-origin
 
             headers: {
-                'Content-Type': 'application/json',
-                "Access-Control-Allow-Origin": "*"
+                'Content-Type': 'application/json'
+    
 
             }
         }
@@ -102,5 +102,5 @@ const fetchData = async () => {
 }
 
 
-console.log('8')
+console.log('9')
 fetchData()
